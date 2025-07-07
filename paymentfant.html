@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pembayaran Digital</title>
+    <style>
+        body {
+            background: #000;
+            color: #0ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #0ff;
+            box-shadow: 0 0 20px #0ff;
+            margin: 20px 0;
+        }
+        h1, h2, p {
+            text-shadow: 0 0 10px #0ff;
+            margin: 5px;
+        }
+        .welcome {
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+            margin-bottom: 20px;
+        }
+        .pay-box {
+            background: #111;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 20px #0ff;
+        }
+        .pay-box img {
+            width: 35px;
+            height: 35px;
+        }
+        .pay-box span {
+            flex: 1;
+            margin: 0 10px;
+            font-size: 18px;
+            text-shadow: 0 0 10px #0ff;
+        }
+        .pay-box button {
+            background: #0ff;
+            color: #000;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #0ff;
+        }
+        .btn {
+            background: #0ff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 5px;
+            box-shadow: 0 0 10px #0ff;
+        }
+        .marquee {
+            font-size: 20px;
+            color: #0ff;
+            text-shadow: 0 0 10px #0ff;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <marquee class="marquee">Selamat datang di pembayaran digital Fant Official 👾</marquee>
+
+    <img src="https://files.catbox.moe/op1fgq.jpg" alt="Profil" class="profile-img">
+    <h1>Fant Official</h1>
+    <h2>Pembayaran Digital</h2>
+    <p class="welcome">Setelah Transfer Mohon Kirimkan Bukti Transfer</p>
+
+    <div class="pay-box">
+        <img src="https://files.catbox.moe/zydrr8.jpg" alt="Dana">
+        <span>082120213739</span>
+        <button onclick="copyText('082120213739')">Salin</button>
+    </div>
+
+    <div class="pay-box">
+        <img src="https://files.catbox.moe/lgcn5f.jpg" alt="GoPay">
+        <span>081324146691</span>
+        <button onclick="copyText('081324146691')">Salin</button>
+    </div>
+
+    <button class="btn" onclick="openQRIS()">Buka QRIS</button>
+    <button class="btn" onclick="toggleMusic()">🎧 Play / Pause Musik</button>
+
+    <audio id="music" src="https://files.catbox.moe/5a0px4.mp3" autoplay loop></audio>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            alert("Nomor " + text + " berhasil disalin!");
+        }
+        function openQRIS() {
+            window.open('https://files.catbox.moe/582s77.jpg', '_blank');
+        }
+        function toggleMusic() {
+            var audio = document.getElementById('music');
+            if(audio.paused){
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+</body>
+</
